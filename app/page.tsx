@@ -4,6 +4,7 @@ import PageShell from "@/components/PageShell";
 import SectionHeading from "@/components/SectionHeading";
 import ServicesGrid from "@/components/ServicesGrid";
 import ContactCta from "@/components/ContactCta";
+import YouTubeShowcase from "@/components/YouTubeShowcase";
 
 const articles = ["Kariyer Seçiminde En Sık Yapılan Hatalar", "Ertelemenin Görünmeyen Sebebi", "Daha İyi Sorular Sormak Neden Önemli?"];
 
@@ -16,5 +17,6 @@ export default function Home() { return <PageShell>
   <section className="shell py-24 sm:py-32"><SectionHeading eyebrow="ÇALIŞMA ALANLARI" title="İhtiyaca göre şekillenen, insana yakın çalışmalar." intro="Her çalışma; hedefi, bağlamı ve insanı merkeze alan yalın bir süreçle tasarlanır." /><ServicesGrid /></section>
   <section className="bg-[#17324f] text-white"><div className="shell grid gap-12 py-24 sm:py-32 lg:grid-cols-[.8fr_1.2fr]"><div><p className="eyebrow text-[#d9c49f]">YAKLAŞIM</p><h2 className="mt-5 font-serif text-4xl leading-tight sm:text-5xl">Bilgi, ancak hayata değdiğinde dönüşür.</h2></div><div className="space-y-6 text-lg leading-8 text-slate-200"><p>Psikolojik danışmanlıktan kariyer gelişimine, eğitim tasarımından kurum çalışmalarına uzanan deneyimimi tek bir amaç için kullanıyorum: insan gelişimini görünür ve uygulanabilir kılmak.</p><p>İyi bir gelişim sürecinin doğru cevaplardan önce doğru sorularla başladığına inanıyorum.</p><Link className="inline-block border-b border-[#d9c49f] pb-1 text-sm font-semibold text-[#d9c49f]" href="/hakkimda">Hakkımda daha fazlası →</Link></div></div></section>
   <section className="shell py-24 sm:py-32"><div className="flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between"><SectionHeading eyebrow="YAZILAR" title="Düşünmek için küçük bir alan." intro="Psikoloji, kariyer ve öğrenme üzerine notlar." /><Link href="/blog" className="text-sm font-semibold text-[#17324f]">Tüm yazılar →</Link></div><div className="mt-10 grid gap-4 md:grid-cols-3">{articles.map((article, i) => <Link href="/blog" className="group rounded-3xl border border-[#17324f]/10 p-7 transition hover:border-[#b99155] hover:bg-[#efece6]" key={article}><p className="text-xs font-bold tracking-[.15em] text-[#b99155]">{String(i+1).padStart(2,"0")} · YAKINDA</p><h3 className="mt-16 text-2xl font-semibold leading-tight text-[#17324f]">{article}</h3><p className="mt-5 text-sm font-semibold text-[#17324f]">Oku →</p></Link>)}</div></section>
+  <YouTubeShowcase />
   <ContactCta />
 </PageShell>; }

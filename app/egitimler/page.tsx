@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import PageShell from "@/components/PageShell";
 import SectionHeading from "@/components/SectionHeading";
+import SeminarGallery from "@/components/SeminarGallery";
 
 export const metadata: Metadata = {
   title: "Eğitim & Seminerler",
@@ -24,19 +25,19 @@ const formats = [
 ];
 
 const seminarPhotos = [
-  "seminer1.jpg",
-  "seminer2.jpg",
-  "seminer4.jpg",
-  "seminer5.jpg",
-  "seminer6.jpg",
-  "seminer7.jpg",
-  "seminer8.jpg",
-  "seminer9.jpg",
-  "seminer10.jpg",
-  "seminer11.jpg",
-  "seminer12.jpg",
-  "seminer13.jpg",
-  "seminer14.png",
+  { src: "seminer1.jpg", label: "Eğitim ve seminer çalışması" },
+  { src: "seminer2.jpg", label: "Eğitim ve seminer çalışması" },
+  { src: "seminer4.jpg", label: "Eğitim ve seminer çalışması" },
+  { src: "seminer5.jpg", label: "Eğitim ve seminer çalışması" },
+  { src: "seminer6.jpg", label: "Eğitim ve seminer çalışması" },
+  { src: "seminer7.jpg", label: "Eğitim ve seminer çalışması" },
+  { src: "seminer8.jpg", label: "Eğitim ve seminer çalışması" },
+  { src: "seminer9.jpg", label: "Eğitim ve seminer çalışması" },
+  { src: "seminer10.jpg", label: "Eğitim ve seminer çalışması" },
+  { src: "seminer11.jpg", label: "Eğitim ve seminer çalışması" },
+  { src: "seminer12.jpg", label: "Eğitim ve seminer çalışması" },
+  { src: "seminer13.jpg", label: "Eğitim ve seminer çalışması" },
+  { src: "seminer14.png", label: "Eğitim ve seminer çalışması" },
 ];
 
 export default function EducationPage() {
@@ -67,11 +68,7 @@ export default function EducationPage() {
 
     <section className="shell py-20 sm:py-28">
       <SectionHeading eyebrow="SEMİNERLERDEN" title="Birlikte düşünmek, birlikte gelişmek." intro="Farklı kurum, okul ve topluluklarla gerçekleştirdiğim eğitim ve seminerlerden kareler." />
-      <div className="mt-12 grid auto-rows-[13rem] grid-cols-2 gap-4 sm:auto-rows-[17rem] md:grid-cols-4">
-        {seminarPhotos.map((photo, index) => <figure key={photo} className={`relative overflow-hidden rounded-3xl ${index === 0 ? "col-span-2 row-span-2" : ""} ${index === 4 ? "col-span-2" : ""}`}>
-          <Image src={`/${photo}`} alt="Sezgin İldeş eğitim ve seminer çalışması" fill sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, 25vw" className="object-cover transition duration-500 hover:scale-105" />
-        </figure>)}
-      </div>
+      <SeminarGallery photos={seminarPhotos} />
     </section>
 
     <section className="shell grid gap-10 py-20 sm:py-28 lg:grid-cols-[.75fr_1.25fr] lg:items-center">

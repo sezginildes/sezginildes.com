@@ -1,2 +1,2 @@
 import type { MetadataRoute } from "next";
-export default function sitemap(): MetadataRoute.Sitemap { const base = "https://sezginildes.com"; return ["","/hakkimda","/hizmetler","/egitimler","/blog","/iletisim"].map(path => ({ url: `${base}${path}`, lastModified: new Date(), changeFrequency: "monthly", priority: path === "" ? 1 : .7 })); }
+export default function sitemap(): MetadataRoute.Sitemap { const base = "https://sezginildes.com"; return ["","/hakkimda","/hizmetler","/psikolojik-danismanlik","/egitimler","/blog","/iletisim"].map(path => ({ url: `${base}${path}`, lastModified: new Date(), changeFrequency: "monthly", priority: path === "" ? 1 : path === "/psikolojik-danismanlik" ? .9 : .7 })); }

@@ -13,7 +13,7 @@ export default function Navbar() {
           {links.map(([label, href]) => <Link key={href} className="transition hover:text-[#17324f]" href={href}>{label}</Link>)}
           <Link className="transition hover:text-[#17324f]" href="/iletisim">İletişim</Link>
         </nav>
-        <Link href="/iletisim" className="rounded-full bg-[#17324f] px-4 py-2.5 text-xs font-semibold text-white transition hover:bg-[#10283f] sm:px-5">Randevu Al</Link>
+        <a href="https://wa.me/905388504976?text=Merhaba%20Sezgin%20Bey%2C%20web%20siteniz%20%C3%BCzerinden%20randevu%20bilgisi%20almak%20istiyorum." target="_blank" rel="noreferrer" className="rounded-full bg-[#17324f] px-4 py-2.5 text-xs font-semibold text-white transition hover:bg-[#10283f] sm:px-5">Randevu Al</a>
       </div>
     </header>
   );

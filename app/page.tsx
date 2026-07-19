@@ -7,7 +7,7 @@ import ContactCta from "@/components/ContactCta";
 import YouTubeShowcase from "@/components/YouTubeShowcase";
 
 const articles = ["Kariyer Seçiminde En Sık Yapılan Hatalar", "Ertelemenin Görünmeyen Sebebi", "Daha İyi Sorular Sormak Neden Önemli?"];
-const supportTopics = ["Kaygı ve stres", "Erteleme ve odaklanma", "Karar verme", "Kendini tanıma", "Yaşam yönü", "Kariyer geçişleri"];
+const supportTopics = ["Kaygı ve stres", "Erteleme ve odaklanma", "Travmatik yaşantıların etkileri", "Karar verme", "Kendini tanıma", "Yaşam yönü", "Kariyer geçişleri"];
 
 export default function Home() { return <PageShell>
   <section className="overflow-hidden"><div className="shell grid min-h-[calc(100svh-73px)] items-center gap-12 py-14 lg:grid-cols-[1.05fr_.95fr] lg:py-20">

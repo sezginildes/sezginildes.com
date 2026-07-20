@@ -48,7 +48,7 @@ export default function Navbar() {
             aria-expanded={menuOpen}
             aria-controls="mobile-menu"
             onClick={() => setMenuOpen((open) => !open)}
-            className="grid h-10 w-10 place-items-center rounded-full border border-[#17324f]/15 text-[#17324f] md:hidden"
+            className="grid h-10 w-10 place-items-center rounded-full border border-[#17324f]/15 text-[#17324f]"
           >
             <span className="sr-only">
               Menüyü {menuOpen ? "kapat" : "aç"}
@@ -73,7 +73,7 @@ export default function Navbar() {
         <nav
           id="mobile-menu"
           aria-label="Mobil menü"
-          className="border-t border-[#17324f]/10 bg-[#f8f7f4] px-6 py-5 md:hidden"
+          className="border-t border-[#17324f]/10 bg-[#f8f7f4] px-6 py-5"
         >
           <div className="mx-auto grid max-w-[76rem] gap-1">
             {[...links, ["İletişim", "/iletisim"] as const].map(

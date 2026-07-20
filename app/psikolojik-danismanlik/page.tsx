@@ -12,9 +12,11 @@ export const metadata: Metadata = pageMetadata({
 
 const topics = [
   ["Kaygı ve stres", "Zihniniz sürekli meşgulse, günlük hayatınızda daha dengeli bir alan açmak için."],
-  ["Erteleme ve odaklanma", "Başlamakta zorlandığınız, sürdüremediğiniz veya kendinizi sabote ediyor gibi hissettiğiniz zamanlar için."],
+  ["Erteleme ve motivasyon", "Başlamakta zorlandığınız, sürdüremediğiniz veya kendinizi sabote ediyor gibi hissettiğiniz zamanlar için."],
+  ["İlişkiler ve sınırlar", "İlişkilerde tekrar eden döngüleri, bağlanma biçimlerini ve sınır koyma ihtiyacını anlamak için."],
+  ["Zorlayıcı duygular", "Değersizlik, yetersizlik ya da suçluluk gibi duygularla daha şefkatli ve işlevsel bir ilişki kurmak için."],
   ["Travmatik yaşantıların etkileri", "Geçmişte yaşananların bugün duygularınıza, ilişkilerinize veya yaşamınıza etkisini anlamak için."],
-  ["Karar verme ve yaşam yönü", "Bir dönemeçte olduğunuzda, kendi değerlerinize daha yakın seçimler yapabilmek için."],
+  ["Karar verme ve yaşam yönü", "Kariyer değişikliği, taşınma veya yeni bir yaşam düzeni gibi geçiş dönemlerinde kendi değerlerinize daha yakın seçimler yapmak için."],
 ];
 
 const process = [

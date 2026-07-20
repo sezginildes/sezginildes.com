@@ -34,7 +34,13 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         <h1 className="display mt-5 text-5xl leading-[1.02] text-[#17324f] sm:text-6xl">{article.title}</h1>
         <p className="mt-8 max-w-2xl text-xl leading-9 text-slate-600">{article.excerpt}</p>
         <div className="mt-16 space-y-5">
-          {content.map((block, index) => block.type === "heading_2" || block.type === "heading_3" ? <h2 key={`${block.text}-${index}`} className="mt-12 text-3xl font-semibold text-[#17324f]">{block.text}</h2> : <p key={`${block.text}-${index}`} className="text-lg leading-8 text-slate-600">{block.text}</p>)}
+          {content.map((block, index) => {
+            const key = `${block.text}-${index}`;
+            if (block.type === "heading_2" || block.type === "heading_3") return <h2 key={key} className="mt-12 text-3xl font-semibold text-[#17324f]">{block.text}</h2>;
+            if (block.type === "bulleted_list_item") return <p key={key} className="flex gap-3 text-lg leading-8 text-slate-600"><span className="mt-3 h-1.5 w-1.5 shrink-0 rounded-full bg-[#b99155]" />{block.text}</p>;
+            if (block.type === "quote") return <blockquote key={key} className="my-8 border-l-2 border-[#b99155] pl-5 text-lg leading-8 text-slate-600">{block.text}</blockquote>;
+            return <p key={key} className="text-lg leading-8 text-slate-600">{block.text}</p>;
+          })}
         </div>
         {staticArticle?.video ? (
           <section className="mt-16 rounded-3xl border border-[#17324f]/10 bg-[#efece6] p-8 sm:p-10">

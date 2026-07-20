@@ -5,9 +5,25 @@ export type Article = {
   excerpt: string;
   date: string;
   sections: Array<{ heading: string; paragraphs: string[] }>;
+  video?: { title: string; url: string };
 };
 
 export const articles: Article[] = [
+  {
+    slug: "kamera-karsisinda-konusma-korkusu",
+    category: "Psikolojik danışmanlık",
+    title: "Kamera Karşısında Konuşmaktan Neden Çekiniriz?",
+    excerpt: "Kamera karşısında konuşmak; olumsuz değerlendirilme kaygısı, yetersiz görünme endişesi ve kaçınma döngüsü nedeniyle zor gelebilir.",
+    date: "20 Temmuz 2026",
+    video: { title: "Bu Videoyu Çekmekten Korktum | Vaka 1", url: "https://youtu.be/kD9jt3BLNfM" },
+    sections: [
+      { heading: "Kamera açıldığında neden zorlaşır?", paragraphs: ["Kalabalık karşısında rahat konuşabilen biri için bile kamera karşısına geçmek zorlayıcı olabilir. Çünkü mesele yalnızca ne söyleyeceğimiz değil; görünür olmak, değerlendirilmek ve kendimizi eksiksiz anlatmak isteğiyle de ilgilidir.", "Bu yazı, benim de kamera karşısında konuşma çekincemle yüzleşme denememden doğdu."] },
+      { heading: "Bizi geri çeken ne olabilir?", paragraphs: ["Olumsuz değerlendirilme kaygısı, yetersiz görünme endişesi ve o an donup kalma ihtimali kişiyi geriye çekebilir. Sakin bir anda bildiğimiz şeyler, gerilim yükseldiğinde erişilmez gibi hissedilebilir.", "Bir başka zorluk da belirsizliktir: Video nasıl karşılanacak, bir hata olursa ne olacak, beklediğim gibi olmazsa ne yapacağım?"] },
+      { heading: "Kaçınma kısa vadede rahatlatır", paragraphs: ["Kamerayı açmamak ya da videoyu ertelemek o an için rahatlatıcı gelebilir. Fakat kaçınma uzadıkça, zihin o durumu daha büyük ve daha tehdit edici algılamaya başlayabilir.", "Ben bunu yüzme korkumda da deneyimledim. Korkuyu yalnızca düşünerek değil; güvenli bir ortamda, destek alarak ve küçük adımlarla yeniden yaklaşarak azaltabildim."] },
+      { heading: "Küçük adımlar daha gerçekçi bir başlangıçtır", paragraphs: ["İlk hedef kusursuz bir video çekmek olmak zorunda değil. Kısa bir video kaydetmek, güvendiğiniz bir kişiyle paylaşmak, birkaç not hazırlamak ya da olası olumsuz bir yoruma hemen yanıt vermemek için kendinize zaman tanımak daha gerçekçi başlangıçlardır.", "Benim için önemli olan korkunun tamamen ortadan kalkması değildi; korkuya rağmen küçük bir hareket alanı açabilmekti."] },
+      { heading: "Her zorlanma aynı değildir", paragraphs: ["Kamera karşısında konuşma çekincesi birçok kişide pratikle hafifleyebilir. Ancak kaygı günlük yaşamı, ilişkileri, işi ya da eğitimi belirgin biçimde etkiliyorsa, uygun profesyonel destek aramak anlamlı bir başlangıç olabilir.", "Bu yazı bilgilendirme amaçlıdır; kişisel bir değerlendirme yerine geçmez."] },
+    ],
+  },
   {
     slug: "erteleme-her-zaman-tembellik-degildir",
     category: "Psikolojik danışmanlık",

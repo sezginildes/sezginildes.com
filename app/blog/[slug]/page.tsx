@@ -26,5 +26,37 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
     ? notionArticle.blocks.map((block) => ({ type: block.type, text: block.text }))
     : staticArticle!.sections.flatMap((section) => [{ type: "heading_2", text: section.heading }, ...section.paragraphs.map((text) => ({ type: "paragraph", text }))]);
 
-  return <PageShell><article className="shell max-w-4xl py-20 sm:py-28"><Link href="/blog" className="text-sm font-semibold text-[#17324f]">← Tüm yazılar</Link><p className="eyebrow mt-12">{article.category} · {article.date}</p><h1 className="display mt-5 text-5xl leading-[1.02] text-[#17324f] sm:text-6xl">{article.title}</h1><p className="mt-8 max-w-2xl text-xl leading-9 text-slate-600">{article.excerpt}</p><div className="mt-16 space-y-5">{content.map((block, index) => block.type === "heading_2" || block.type === "heading_3" ? <h2 key={`${block.text}-${index}`} className="mt-12 text-3xl font-semibold text-[#17324f]">{block.text}</h2> : <p key={`${block.text}-${index}`} className="text-lg leading-8 text-slate-600">{block.text}</p>)}</div><div className="mt-16 rounded-3xl bg-[#efece6] p-8"><p className="text-lg font-semibold text-[#17324f]">Kendiniz için daha uygun bir yön arıyorsanız, görüşme talep edebilirsiniz.</p><Link href="/iletisim" className="mt-5 inline-block rounded-full bg-[#17324f] px-6 py-3.5 text-sm font-semibold text-white">Görüşme talep et</Link></div></article></PageShell>;
+  return (
+    <PageShell>
+      <article className="shell max-w-4xl py-20 sm:py-28">
+        <Link href="/blog" className="text-sm font-semibold text-[#17324f]">← Tüm yazılar</Link>
+        <p className="eyebrow mt-12">{article.category} · {article.date}</p>
+        <h1 className="display mt-5 text-5xl leading-[1.02] text-[#17324f] sm:text-6xl">{article.title}</h1>
+        <p className="mt-8 max-w-2xl text-xl leading-9 text-slate-600">{article.excerpt}</p>
+        <div className="mt-16 space-y-5">
+          {content.map((block, index) => block.type === "heading_2" || block.type === "heading_3" ? <h2 key={`${block.text}-${index}`} className="mt-12 text-3xl font-semibold text-[#17324f]">{block.text}</h2> : <p key={`${block.text}-${index}`} className="text-lg leading-8 text-slate-600">{block.text}</p>)}
+        </div>
+        {staticArticle?.video ? (
+          <section className="mt-16 rounded-3xl border border-[#17324f]/10 bg-[#efece6] p-8 sm:p-10">
+            <p className="eyebrow">VİDEO</p>
+            <h2 className="mt-4 text-3xl font-semibold text-[#17324f]">Bu yazının çıkış noktası olan videoyu izleyin.</h2>
+            <div className="mt-7 aspect-video overflow-hidden rounded-2xl bg-[#17324f] shadow-sm">
+              <iframe
+                className="h-full w-full"
+                src="https://www.youtube-nocookie.com/embed/kD9jt3BLNfM"
+                title={staticArticle.video.title}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+            </div>
+          </section>
+        ) : null}
+        <div className="mt-16 rounded-3xl bg-[#efece6] p-8">
+          <p className="text-lg font-semibold text-[#17324f]">Kendiniz için daha uygun bir yön arıyorsanız, görüşme talep edebilirsiniz.</p>
+          <Link href="/iletisim" className="mt-5 inline-block rounded-full bg-[#17324f] px-6 py-3.5 text-sm font-semibold text-white">Görüşme talep et</Link>
+        </div>
+      </article>
+    </PageShell>
+  );
 }

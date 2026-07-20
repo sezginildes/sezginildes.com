@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 const links = [
+  ["Psikolojik Danışmanlık", "/psikolojik-danismanlik"],
   ["Hakkımda", "/hakkimda"],
   ["Hizmetler", "/hizmetler"],
   ["Kariyer", "/kariyer-danismanligi"],

@@ -57,6 +57,10 @@ export default function PsychologicalCounselingPage() {
         <blockquote className="font-serif text-2xl leading-relaxed text-[#17324f] sm:text-3xl">“Sezgin; insanlarla yakından ilgilenen, süreçlerini dikkatle dinleyen ve ihtiyaçları gerçekçi bir yerden değerlendiren biri. Samimi, enerjik ve gerektiğinde kişiyi nazikçe harekete geçiren yaklaşımıyla güven veriyor.”</blockquote>
         <figcaption className="mt-7 text-sm font-semibold text-slate-600">D. · İnsan Kaynakları ve Eğitim Direktörü</figcaption>
       </figure>
+      <figure className="mt-4 max-w-3xl rounded-3xl border border-[#17324f]/10 bg-[#efece6] p-8 sm:p-10">
+        <blockquote className="font-serif text-2xl leading-relaxed text-[#17324f] sm:text-3xl">“Zorlandığım bir dönemde, dikkatle dinlendiğimi ve kendimi anlamaya alan açıldığını hissettim. Süreçteki sorular, duygularımı daha fark ederek ele almama yardımcı oldu.”</blockquote>
+        <figcaption className="mt-7 text-sm font-semibold text-slate-600">H.E. · Anonim geri bildirim</figcaption>
+      </figure>
     </section>
 
     <section className="shell grid gap-12 py-20 sm:py-28 lg:grid-cols-[.8fr_1.2fr]"><div><p className="eyebrow">MERAK EDİLENLER</p><h2 className="display mt-5 text-4xl leading-tight sm:text-5xl">Sürece dair açık yanıtlar.</h2><p className="mt-6 max-w-md leading-7 text-slate-600">Danışmanlıkla ilgili aklınıza takılanları ilk temasta da rahatlıkla sorabilirsiniz.</p></div><div className="divide-y divide-[#17324f]/10 rounded-3xl border border-[#17324f]/10 px-6 sm:px-8">{faqs.map(([question, answer]) => <article key={question} className="py-6"><h3 className="text-lg font-semibold text-[#17324f]">{question}</h3><p className="mt-3 leading-7 text-slate-600">{answer}</p></article>)}</div></section>

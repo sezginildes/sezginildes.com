@@ -45,6 +45,14 @@ export default function CareerCounselingPage() {
         <div className="mt-12 grid gap-4 md:grid-cols-3">{process.map(([number, title, text]) => <article key={number} className="rounded-3xl bg-[#f8f7f4] p-7"><p className="text-sm font-bold tracking-[.16em] text-[#b99155]">{number}</p><h2 className="mt-12 text-2xl font-semibold text-[#17324f]">{title}</h2><p className="mt-4 leading-7 text-slate-600">{text}</p></article>)}</div>
       </div></section>
 
+      <section className="shell py-20 sm:py-28">
+        <SectionHeading eyebrow="BİRLİKTE ÇALIŞMA DENEYİMİ" title="Süreçten geriye kalan." />
+        <figure className="mt-10 max-w-3xl rounded-3xl border border-[#17324f]/10 bg-[#f8f7f4] p-8 sm:p-10">
+          <blockquote className="font-serif text-2xl leading-relaxed text-[#17324f] sm:text-3xl">“Sezgin Bey’in kariyer ve kişisel gelişim alanında sunduğu rehberlik; İngilizce öğrenme sürecimde, iş hayatına geçişimde ve önemli kariyer kararlarımda daha net ilerlememe yardımcı oldu. Samimi, özenli ve gerçekten dinleyen bir danışman olarak gönül rahatlığıyla tavsiye ederim.”</blockquote>
+          <figcaption className="mt-7 text-sm font-semibold text-slate-600">H. · İnsan Kaynakları Uzmanı</figcaption>
+        </figure>
+      </section>
+
       <section className="bg-[#b99155]"><div className="shell flex flex-col gap-7 py-16 md:flex-row md:items-end md:justify-between"><div><p className="eyebrow text-[#17324f]">İLK ADIM</p><h2 className="display mt-4 max-w-2xl text-4xl leading-tight text-[#10283f] sm:text-5xl">Kariyer yolculuğunuz hakkında kısa bir konuşmayla başlayalım.</h2></div><a href={whatsAppUrl("Merhaba Sezgin Bey, kariyer danışmanlığı için ücretsiz kısa ön görüşme talep etmek istiyorum.")} target="_blank" rel="noreferrer" className="w-fit rounded-full bg-[#17324f] px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-[#10283f]">WhatsApp’tan yaz</a></div></section>
     </PageShell>
   );

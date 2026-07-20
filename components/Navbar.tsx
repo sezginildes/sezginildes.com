@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const links = [
-  ["Hakkımda", "/hakkimda"], ["Hizmetler", "/hizmetler"], ["Eğitimler", "/egitimler"], ["Blog", "/blog"],
+  ["Hakkımda", "/hakkimda"], ["Hizmetler", "/hizmetler"], ["Kariyer", "/kariyer-danismanligi"], ["Eğitimler", "/egitimler"], ["Blog", "/blog"],
 ] as const;
 
 export default function Navbar() {

@@ -19,16 +19,16 @@ export async function POST(request: Request) {
     }
 
     const supabaseUrl = process.env.SUPABASE_URL;
-    const supabaseAnonKey = process.env.SUPABASE_ANON_KEY;
-    if (!supabaseUrl || !supabaseAnonKey) {
+    const supabaseServiceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+    if (!supabaseUrl || !supabaseServiceRoleKey) {
       return NextResponse.json({ ok: false, error: "Bülten altyapısı henüz tamamlanmadı. Lütfen daha sonra tekrar deneyin." }, { status: 503 });
     }
 
     const response = await fetch(`${supabaseUrl}/rest/v1/subscribers?on_conflict=email`, {
       method: "POST",
       headers: {
-        apikey: supabaseAnonKey,
-        Authorization: `Bearer ${supabaseAnonKey}`,
+        apikey: supabaseServiceRoleKey,
+        Authorization: `Bearer ${supabaseServiceRoleKey}`,
         "Content-Type": "application/json",
         Prefer: "resolution=ignore-duplicates,return=minimal",
       },

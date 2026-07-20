@@ -2,8 +2,8 @@ import Link from "next/link";
 
 const services = [
   { no: "01", title: "Psikolojik Danışmanlık", text: "Kendini daha iyi anlamak, kaygı, erteleme ve travmatik yaşantıların etkileri üzerine bireysel destek.", href: "/psikolojik-danismanlik" },
-  { no: "02", title: "Kariyer Danışmanlığı", text: "Kariyer yönü, geçiş süreçleri, profesyonel görünürlük ve karar verme için yapılandırılmış bir yol haritası.", href: "/hizmetler" },
-  { no: "03", title: "Kurumsal Eğitimler", text: "Öğrenme, psikolojik dayanıklılık, çalışan gelişimi ve insan odaklı sistemler üzerine kurumlara özel çalışmalar.", href: "/hizmetler" },
+  { no: "02", title: "Kariyer Danışmanlığı", text: "Kariyer yönü, geçiş süreçleri, profesyonel görünürlük ve karar verme için yapılandırılmış bir yol haritası.", href: "/kariyer-danismanligi" },
+  { no: "03", title: "Kurumsal Eğitimler", text: "Öğrenme, psikolojik dayanıklılık, çalışan gelişimi ve insan odaklı sistemler üzerine kurumlara özel çalışmalar.", href: "/egitimler" },
   { no: "04", title: "Eğitim & Seminerler", text: "Okullar, kurumlar ve topluluklar için anlaşılır, uygulanabilir ve katılımcı deneyimler.", href: "/egitimler" },
 ];
 

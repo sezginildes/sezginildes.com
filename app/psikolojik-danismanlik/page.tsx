@@ -49,6 +49,14 @@ export default function PsychologicalCounselingPage() {
       <div className="mt-12 grid gap-4 md:grid-cols-3">{process.map(([number, title, text]) => <article key={number} className="rounded-3xl bg-[#f8f7f4] p-7"><p className="text-sm font-bold tracking-[.16em] text-[#b99155]">{number}</p><h2 className="mt-12 text-2xl font-semibold text-[#17324f]">{title}</h2><p className="mt-4 leading-7 text-slate-600">{text}</p></article>)}</div>
     </div></section>
 
+    <section className="shell py-20 sm:py-28">
+      <SectionHeading eyebrow="YAKLAŞIM HAKKINDA" title="Dinlemek, yalnızca duymak değildir." />
+      <figure className="mt-10 max-w-3xl rounded-3xl border border-[#17324f]/10 bg-[#f8f7f4] p-8 sm:p-10">
+        <blockquote className="font-serif text-2xl leading-relaxed text-[#17324f] sm:text-3xl">“Sezgin; insanlarla yakından ilgilenen, süreçlerini dikkatle dinleyen ve ihtiyaçları gerçekçi bir yerden değerlendiren biri. Samimi, enerjik ve gerektiğinde kişiyi nazikçe harekete geçiren yaklaşımıyla güven veriyor.”</blockquote>
+        <figcaption className="mt-7 text-sm font-semibold text-slate-600">D. · İnsan Kaynakları ve Eğitim Direktörü</figcaption>
+      </figure>
+    </section>
+
     <section className="shell grid gap-12 py-20 sm:py-28 lg:grid-cols-[.8fr_1.2fr]"><div><p className="eyebrow">MERAK EDİLENLER</p><h2 className="display mt-5 text-4xl leading-tight sm:text-5xl">Sürece dair açık yanıtlar.</h2><p className="mt-6 max-w-md leading-7 text-slate-600">Danışmanlıkla ilgili aklınıza takılanları ilk temasta da rahatlıkla sorabilirsiniz.</p></div><div className="divide-y divide-[#17324f]/10 rounded-3xl border border-[#17324f]/10 px-6 sm:px-8">{faqs.map(([question, answer]) => <article key={question} className="py-6"><h3 className="text-lg font-semibold text-[#17324f]">{question}</h3><p className="mt-3 leading-7 text-slate-600">{answer}</p></article>)}</div></section>
 
     <section className="bg-[#b99155]"><div className="shell flex flex-col gap-7 py-16 md:flex-row md:items-end md:justify-between"><div><p className="eyebrow text-[#17324f]">İLK ADIM</p><h2 className="display mt-4 max-w-2xl text-4xl leading-tight text-[#10283f] sm:text-5xl">Size iyi gelecek bir konuşmayla başlayalım.</h2></div><a href="https://wa.me/905388504976?text=Merhaba%20Sezgin%20Bey%2C%20psikolojik%20dan%C4%B1%C5%9Fmanl%C4%B1k%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noreferrer" className="w-fit rounded-full bg-[#17324f] px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-[#10283f]">WhatsApp’tan yaz</a></div></section>

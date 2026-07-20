@@ -4,6 +4,7 @@ import Link from "next/link";
 import PageShell from "@/components/PageShell";
 import { articles, getArticle } from "@/lib/articles";
 import { getNotionBlogPost } from "@/lib/notion";
+import { pageMetadata } from "@/lib/seo";
 
 export function generateStaticParams() {
   return articles.map((article) => ({ slug: article.slug }));
@@ -12,7 +13,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const article = await getNotionBlogPost(slug) ?? getArticle(slug);
-  return article ? { title: article.title, description: article.excerpt } : {};
+  return article ? pageMetadata({ title: article.title, description: article.excerpt, path: `/blog/${slug}`, ogType: "article" }) : {};
 }
 
 export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {

@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import PageShell from "@/components/PageShell";
 import SectionHeading from "@/components/SectionHeading";
 import ContactCta from "@/components/ContactCta";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Hizmetler",
   description: "Psikolojik danışmanlık, kariyer danışmanlığı, kurumsal eğitimler ve seminerler.",
-};
+  path: "/hizmetler",
+});
 
 const services = [
   ["Psikolojik Danışmanlık", "Kendinizi daha iyi anlamak, zorlayıcı döngüleri fark etmek ve hayatınızda daha dengeli bir yön kurmak için güvenli bir düşünme alanı.", ["Öz farkındalık", "Kaygı ve erteleme", "Travmatik yaşantıların etkileri", "Karar verme", "Yaşam yönü"]],
@@ -24,7 +26,7 @@ const process = [
 export default function ServicesPage() {
   return <PageShell>
     <section className="shell py-20 sm:py-28">
-      <SectionHeading eyebrow="HİZMETLER" title="Her ihtiyacın kendine özgü bir gelişim yolu vardır." intro="Bireysel ya da kurumsal çalışmalarda, süreci ihtiyacın bağlamına göre birlikte netleştiririz." />
+      <SectionHeading as="h1" eyebrow="HİZMETLER" title="Her ihtiyacın kendine özgü bir gelişim yolu vardır." intro="Bireysel ya da kurumsal çalışmalarda, süreci ihtiyacın bağlamına göre birlikte netleştiririz." />
       <div className="mt-14 space-y-4">
         {services.map(([title, text, items], index) => <article key={title as string} className="grid gap-6 rounded-3xl border border-[#17324f]/10 p-7 sm:p-10 lg:grid-cols-[.25fr_.75fr]">
           <p className="text-sm font-bold tracking-[.16em] text-[#b99155]">0{index + 1}</p>
@@ -34,7 +36,7 @@ export default function ServicesPage() {
     </section>
     <section className="bg-[#efece6]"><div className="shell py-20 sm:py-28">
       <SectionHeading eyebrow="NASIL ÇALIŞIYORUZ?" title="Süreç, doğru bir ilk konuşmayla başlar." intro="İlk adımın kolay ve anlaşılır olması önemli. İhtiyacınızı birlikte değerlendirir, size uygun çerçeveyi netleştiririz." />
-      <div className="mt-12 grid gap-4 md:grid-cols-3">{process.map(([number, title, text]) => <article key={number} className="rounded-3xl bg-[#f8f7f4] p-7"><p className="text-sm font-bold tracking-[.16em] text-[#b99155]">{number}</p><h2 className="mt-12 text-2xl font-semibold text-[#17324f]">{title}</h2><p className="mt-4 leading-7 text-slate-600">{text}</p></article>)}</div>
+      <div className="mt-12 grid gap-4 md:grid-cols-3">{process.map(([number, title, text]) => <article key={number} className="rounded-3xl bg-[#f8f7f4] p-7"><p className="text-sm font-bold tracking-[.16em] text-[#b99155]">{number}</p><h3 className="mt-12 text-2xl font-semibold text-[#17324f]">{title}</h3><p className="mt-4 leading-7 text-slate-600">{text}</p></article>)}</div>
     </div></section>
     <ContactCta />
   </PageShell>;

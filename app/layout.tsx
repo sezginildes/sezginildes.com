@@ -5,7 +5,6 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://sezginildes.com"),
   title: { default: "Sezgin İldeş | İnsan Gelişimi", template: "%s | Sezgin İldeş" },
   description: "Psikolojik danışmanlık, kariyer danışmanlığı, kurumsal eğitimler ve seminerler.",
-  keywords: ["Sezgin İldeş", "kariyer danışmanlığı", "psikolojik danışmanlık", "kurumsal eğitim", "seminer"],
   icons: { icon: "/icon.svg", apple: "/icon.svg" },
   openGraph: {
     type: "website",

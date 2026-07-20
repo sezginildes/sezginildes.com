@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import Image from "next/image";
 import PageShell from "@/components/PageShell";
 import SectionHeading from "@/components/SectionHeading";
 import SeminarGallery from "@/components/SeminarGallery";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Eğitim & Seminerler",
   description: "Kurumlar, okullar ve topluluklar için psikoloji, kariyer ve insan gelişimi eğitimleri.",
-};
+  path: "/egitimler",
+});
 
 const topics = [
   ["Psikolojik Dayanıklılık", "Zorlayıcı dönemlerde kaynakları fark etmek, esneklik geliştirmek ve iyi oluşu desteklemek."],

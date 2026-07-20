@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import PageShell from "@/components/PageShell";
 import SectionHeading from "@/components/SectionHeading";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Psikolojik Danışmanlık",
   description: "Kaygı, erteleme, travmatik yaşantıların etkileri, karar verme ve yaşam yönü üzerine bireysel psikolojik danışmanlık.",
-};
+  path: "/psikolojik-danismanlik",
+});
 
 const topics = [
   ["Kaygı ve stres", "Zihniniz sürekli meşgulse, günlük hayatınızda daha dengeli bir alan açmak için."],

@@ -12,6 +12,8 @@ export const metadata: Metadata = pageMetadata({
 
 export default async function NotesPage() {
   const notes = await getStudyNotes();
+  const newsletterUrl = process.env.NEXT_PUBLIC_KIT_NEWSLETTER_URL;
+  const newsletterLink = newsletterUrl?.startsWith("https://") ? newsletterUrl : "";
 
   return <PageShell>
     <section className="border-b border-[#17324f]/10 bg-[#efece6]">
@@ -40,6 +42,7 @@ export default async function NotesPage() {
         <p className="mt-4 max-w-2xl leading-8 text-slate-600">Kaynağı, kendi değerlendirmemi ve uygulama sorularını bir araya getirdiğim ilk notlar tamamlandığında burada yer alacak.</p>
       </div>}
     </section>
+    {newsletterLink && <section className="border-t border-[#17324f]/10 bg-[#efece6]"><div className="shell grid gap-6 py-14 sm:grid-cols-[1fr_auto] sm:items-center"><div><h2 className="font-serif text-3xl text-[#17324f]">Yeni çalışma notlarından haberdar ol</h2><p className="mt-3 max-w-2xl leading-7 text-slate-700">Yeni notları e-postayla almak istersen kayıt sayfasına geçebilirsin.</p></div><a href={newsletterLink} target="_blank" rel="noopener noreferrer" className="w-fit rounded-full bg-[#17324f] px-6 py-3.5 text-sm font-semibold text-white">E-posta listesine katıl ↗</a></div></section>}
     <section className="border-t border-[#17324f]/10 bg-[#17324f] text-white"><div className="shell grid gap-6 py-14 sm:grid-cols-[1fr_auto] sm:items-center"><div><h2 className="font-serif text-3xl">Bu konu sende de karşılık buluyorsa</h2><p className="mt-3 max-w-2xl leading-7 text-slate-200">Bilgiyi kendi yaşadıklarınla birlikte ele almak için bireysel görüşme hakkında bilgi alabilirsin.</p></div><Link href="/psikolojik-danismanlik" className="w-fit rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-[#17324f]">Görüşme hakkında bilgi al</Link></div></section>
   </PageShell>;
 }

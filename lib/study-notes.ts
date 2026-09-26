@@ -8,6 +8,7 @@ export type StudyNote = {
   sourceName: string;
   sourceUrl: string;
   formUrl: string;
+  pdfUrl: string;
 };
 
 type RichText = { plain_text?: string };
@@ -37,11 +38,12 @@ function mapNote(page: NotionPage): StudyNote | null {
   const slug = text(fields["Slug"]?.rich_text);
   const excerpt = text(fields["Kısa açıklama"]?.rich_text);
   const formUrl = httpsUrl(fields["Kit form bağlantısı"]?.url);
+  const pdfUrl = httpsUrl(fields["PDF bağlantısı"]?.url);
   const sourceUrl = httpsUrl(fields["Kaynak video"]?.url);
   const sourceName = text(fields["Kaynak adı"]?.rich_text);
 
-  // A published entry becomes visible only after its delivery form is ready.
-  if (!title || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug) || !excerpt || !formUrl || !sourceUrl || !sourceName) return null;
+  // Published notes need a working link to a PDF or their delivery form.
+  if (!title || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug) || !excerpt || (!formUrl && !pdfUrl) || !sourceUrl || !sourceName) return null;
 
   return {
     slug,
@@ -51,6 +53,7 @@ function mapNote(page: NotionPage): StudyNote | null {
     sourceName,
     sourceUrl,
     formUrl,
+    pdfUrl,
   };
 }
 

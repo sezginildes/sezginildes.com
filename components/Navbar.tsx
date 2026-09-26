@@ -9,6 +9,7 @@ const links = [
   ["Hizmetler", "/hizmetler"],
   ["Kariyer", "/kariyer-danismanligi"],
   ["Eğitimler", "/egitimler"],
+  ["Notlar", "/notlar"],
   ["Blog", "/blog"],
 ] as const;
 
@@ -27,7 +28,7 @@ export default function Navbar() {
 
         <nav
           aria-label="Ana menü"
-          className="hidden items-center gap-6 text-sm text-slate-600 md:flex"
+          className="hidden items-center gap-6 text-sm text-slate-600 xl:flex"
         >
           {links.map(([label, href]) => (
             <Link

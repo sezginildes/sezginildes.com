@@ -31,7 +31,7 @@ export default function ServicePaths() {
         </h2>
         <div className="mt-10 grid gap-4 lg:grid-cols-3">
           {paths.map((path) => (
-            <Link key={path.href} href={path.href} className="group rounded-3xl border border-[#17324f]/10 bg-[#f8f7f4] p-7 transition hover:-translate-y-1 hover:border-[#b99155] hover:shadow-lg sm:p-8">
+            <Link key={path.href} href={path.href} className="group rounded-3xl border border-[#17324f]/10 bg-[#f8f7f4] p-7 transition duration-200 ease-out hover:-translate-y-0.5 hover:border-[#b99155] hover:shadow-md hover:shadow-[#17324f]/5 sm:p-8">
               <p className="text-xs font-bold tracking-[.15em] text-[#b99155]">{path.eyebrow}</p>
               <h3 className="mt-10 text-2xl font-semibold text-[#17324f]">{path.title}</h3>
               <p className="mt-4 leading-7 text-slate-600">{path.text}</p>

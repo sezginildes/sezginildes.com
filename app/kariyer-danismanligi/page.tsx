@@ -31,7 +31,7 @@ export default function CareerCounselingPage() {
           <p className="eyebrow text-[#d9c49f]">KARİYER DANIŞMANLIĞI</p>
           <h1 className="mt-6 font-serif text-5xl leading-[1.02] sm:text-6xl">Kariyerinizde yön bulmak, yalnızca bir iş seçmek değildir.</h1>
           <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-200">Kariyer kararlarını; yetkinlikleriniz, değerleriniz, deneyiminiz ve yaşamınızın gerçekleriyle birlikte ele alırız.</p>
-          <a href={whatsAppUrl("Merhaba Sezgin Bey, kariyer danışmanlığı için ücretsiz kısa ön görüşme hakkında bilgi almak istiyorum.")} target="_blank" rel="noreferrer" className="mt-10 inline-block rounded-full bg-[#d9c49f] px-6 py-3.5 text-sm font-semibold text-[#17324f] transition hover:bg-white">Ücretsiz kısa ön görüşme talep et</a>
+          <a href={whatsAppUrl("Merhaba Sezgin Bey, kariyer danışmanlığı için ücretsiz kısa ön görüşme hakkında bilgi almak istiyorum.")} target="_blank" rel="noreferrer" className="mt-10 inline-block rounded-full bg-[#d9c49f] px-6 py-3.5 text-sm font-semibold text-[#17324f] transition hover:bg-white active:scale-[0.97]">Ücretsiz kısa ön görüşme talep et</a>
         </div>
       </section>
 
@@ -53,7 +53,7 @@ export default function CareerCounselingPage() {
         </figure>
       </section>
 
-      <section className="bg-[#b99155]"><div className="shell flex flex-col gap-7 py-16 md:flex-row md:items-end md:justify-between"><div><p className="eyebrow text-[#17324f]">İLK ADIM</p><h2 className="display mt-4 max-w-2xl text-4xl leading-tight text-[#10283f] sm:text-5xl">Kariyer yolculuğunuz hakkında kısa bir konuşmayla başlayalım.</h2></div><a href={whatsAppUrl("Merhaba Sezgin Bey, kariyer danışmanlığı için ücretsiz kısa ön görüşme talep etmek istiyorum.")} target="_blank" rel="noreferrer" className="w-fit rounded-full bg-[#17324f] px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-[#10283f]">WhatsApp’tan yaz</a></div></section>
+      <section className="bg-[#b99155]"><div className="shell flex flex-col gap-7 py-16 md:flex-row md:items-end md:justify-between"><div><p className="eyebrow text-[#17324f]">İLK ADIM</p><h2 className="display mt-4 max-w-2xl text-4xl leading-tight text-[#10283f] sm:text-5xl">Kariyer yolculuğunuz hakkında kısa bir konuşmayla başlayalım.</h2></div><a href={whatsAppUrl("Merhaba Sezgin Bey, kariyer danışmanlığı için ücretsiz kısa ön görüşme talep etmek istiyorum.")} target="_blank" rel="noreferrer" className="w-fit rounded-full bg-[#17324f] px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-[#10283f] active:scale-[0.97]">WhatsApp’tan yaz</a></div></section>
     </PageShell>
   );
 }

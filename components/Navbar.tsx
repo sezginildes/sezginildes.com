@@ -63,7 +63,7 @@ export default function Navbar() {
             href="https://wa.me/905388504976?text=Merhaba%20Sezgin%20Bey%2C%20web%20siteniz%20%C3%BCzerinden%20randevu%20bilgisi%20almak%20istiyorum."
             target="_blank"
             rel="noreferrer"
-            className="rounded-full bg-[#17324f] px-4 py-2.5 text-xs font-semibold text-white transition hover:bg-[#10283f] sm:px-5"
+            className="rounded-full bg-[#17324f] px-4 py-2.5 text-xs font-semibold text-white transition hover:bg-[#10283f] sm:px-5 active:scale-[0.97]"
           >
             Randevu Al
           </a>
@@ -74,7 +74,7 @@ export default function Navbar() {
         <nav
           id="mobile-menu"
           aria-label="Mobil menü"
-          className="border-t border-[#17324f]/10 bg-[#f8f7f4] px-6 py-5"
+          className="menu-enter border-t border-[#17324f]/10 bg-[#f8f7f4] px-6 py-5"
         >
           <div className="mx-auto grid max-w-[76rem] gap-1">
             {[...links, ["İletişim", "/iletisim"] as const].map(

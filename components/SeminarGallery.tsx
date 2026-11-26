@@ -32,7 +32,7 @@ export default function SeminarGallery({ photos }: { photos: SeminarPhoto[] }) {
     </div>
 
     {activePhoto && activeIndex !== null && <div role="dialog" aria-modal="true" aria-label="Seminer fotoğrafı" className="fixed inset-0 z-[100] flex items-center justify-center bg-[#10283f]/95 p-4 sm:p-8" onClick={() => setActiveIndex(null)}>
-      <button type="button" aria-label="Görüntüleyiciyi kapat" className="absolute right-5 top-5 z-10 rounded-full border border-white/25 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10" onClick={() => setActiveIndex(null)}>Kapat ×</button>
+      <button type="button" aria-label="Görüntüleyiciyi kapat" className="absolute right-5 top-5 z-10 rounded-full border border-white/25 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10 active:scale-[0.97]" onClick={() => setActiveIndex(null)}>Kapat ×</button>
       <button type="button" aria-label="Önceki fotoğraf" className="absolute left-3 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/10 px-4 py-3 text-2xl text-white transition hover:bg-white/20 sm:left-6" onClick={(event) => { event.stopPropagation(); goPrevious(); }}>‹</button>
       <figure className="relative flex h-full w-full max-w-6xl flex-col items-center justify-center" onClick={(event) => event.stopPropagation()}>
         <div className="relative h-[72vh] w-full"><Image src={`/${activePhoto.src}`} alt={activePhoto.label} fill sizes="100vw" className="object-contain" priority /></div>

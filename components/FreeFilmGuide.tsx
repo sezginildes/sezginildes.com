@@ -15,7 +15,7 @@ export default function FreeFilmGuide() {
             href={FILM_GUIDE_URL}
             target="_blank"
             rel="noreferrer"
-            className="mt-8 inline-block rounded-full bg-[#17324f] px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-[#10283f]"
+            className="mt-8 inline-block rounded-full bg-[#17324f] px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-[#10283f] active:scale-[0.97]"
           >
             Rehberi incele →
           </a>

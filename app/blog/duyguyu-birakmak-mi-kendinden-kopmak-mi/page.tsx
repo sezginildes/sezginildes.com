@@ -310,7 +310,7 @@ export default function BlogPostPage() {
 
               <Link
                 href="/iletisim"
-                className="mt-5 inline-flex rounded-full bg-slate-900 px-6 py-3 text-base font-semibold text-white transition hover:bg-teal-800"
+                className="mt-5 inline-flex rounded-full bg-slate-900 px-6 py-3 text-base font-semibold text-white transition hover:bg-teal-800 active:scale-[0.97]"
               >
                 İletişime geç
               </Link>

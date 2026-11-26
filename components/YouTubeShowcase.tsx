@@ -11,7 +11,7 @@ export default function YouTubeShowcase() {
             <p className="eyebrow">YOUTUBE</p>
             <h2 className="display mt-5 max-w-xl text-4xl leading-tight text-[#17324f] sm:text-5xl">Düşünmek, izlemekle de başlar.</h2>
             <p className="mt-5 max-w-xl text-lg leading-8 text-slate-600">Psikoloji, kariyer ve öğrenme üzerine video notlarımı YouTube kanalımda paylaşıyorum.</p>
-            <a href={channelUrl} target="_blank" rel="noreferrer" className="mt-8 inline-block rounded-full bg-[#17324f] px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-[#10283f]">Tüm videoları gör ↗</a>
+            <a href={channelUrl} target="_blank" rel="noreferrer" className="mt-8 inline-block rounded-full bg-[#17324f] px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-[#10283f] active:scale-[0.97]">Tüm videoları gör ↗</a>
           </div>
           <div className="overflow-hidden rounded-[2rem] bg-[#17324f] p-2 shadow-xl shadow-[#17324f]/10">
             <div className="aspect-video overflow-hidden rounded-[1.6rem] bg-black">
@@ -19,6 +19,7 @@ export default function YouTubeShowcase() {
                 className="h-full w-full"
                 src={featuredVideoUrl}
                 title="Kamera karşısında konuşma korkusu"
+                loading="lazy"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
               />

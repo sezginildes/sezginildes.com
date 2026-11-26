@@ -50,7 +50,7 @@ export default function EducationPage() {
           <p className="eyebrow text-[#d9c49f]">EĞİTİM & SEMİNERLER</p>
           <h1 className="mt-5 max-w-3xl font-serif text-5xl leading-[.98] tracking-[-.045em] sm:text-6xl">İyi bir eğitim, katılımcının hayatında yer bulur.</h1>
           <p className="mt-7 max-w-xl text-lg leading-8 text-slate-200">Kurumlar, okullar ve topluluklar için; psikoloji, kariyer ve öğrenme bilimini günlük hayata bağlayan eğitimler ve seminerler tasarlıyorum.</p>
-          <a href="https://wa.me/905388504976?text=Merhaba%20Sezgin%20Bey%2C%20e%C4%9Fitim%20ve%20seminer%20talebimiz%20i%C3%A7in%20size%20ula%C5%9Fmak%20istiyoruz." target="_blank" rel="noreferrer" className="mt-9 inline-block rounded-full bg-[#d9c49f] px-6 py-3.5 text-sm font-semibold text-[#10283f] transition hover:bg-white">Eğitim talebi oluştur</a>
+          <a href="https://wa.me/905388504976?text=Merhaba%20Sezgin%20Bey%2C%20e%C4%9Fitim%20ve%20seminer%20talebimiz%20i%C3%A7in%20size%20ula%C5%9Fmak%20istiyoruz." target="_blank" rel="noreferrer" className="mt-9 inline-block rounded-full bg-[#d9c49f] px-6 py-3.5 text-sm font-semibold text-[#10283f] transition hover:bg-white active:scale-[0.97]">Eğitim talebi oluştur</a>
         </div>
         <div className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden rounded-[2.25rem] border border-white/15"><Image src="/sezgin6.jpg" alt="Sezgin İldeş seminer verirken" fill priority sizes="(max-width: 1024px) 90vw, 35vw" className="object-cover" /></div>
       </div>

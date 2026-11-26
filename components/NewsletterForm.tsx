@@ -45,8 +45,8 @@ export default function NewsletterForm() {
           <form onSubmit={handleSubmit} className="rounded-3xl border border-[#17324f]/10 bg-[#f8f7f4] p-8 sm:p-10">
             <input type="text" name="company" value={company} onChange={(event) => setCompany(event.target.value)} tabIndex={-1} autoComplete="off" aria-hidden="true" className="hidden" />
             <div className="flex flex-col gap-3 sm:flex-row">
-              <input type="email" required value={email} onChange={(event) => setEmail(event.target.value)} placeholder="E-posta adresiniz" aria-label="E-posta adresiniz" className="w-full flex-1 rounded-full border border-[#17324f]/15 bg-white px-5 py-3.5 text-sm outline-none transition focus:border-[#17324f]" />
-              <button type="submit" disabled={status === "loading"} className="rounded-full bg-[#17324f] px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-[#10283f] disabled:opacity-60">{status === "loading" ? "Kaydediliyor…" : "Katıl"}</button>
+              <input type="email" required value={email} onChange={(event) => setEmail(event.target.value)} placeholder="E-posta adresiniz" aria-label="E-posta adresiniz" className="w-full flex-1 rounded-full border border-[#17324f]/15 bg-white px-5 py-3.5 text-sm outline-none transition focus:border-[#17324f] focus-visible:ring-2 focus-visible:ring-[#b99155]/50" />
+              <button type="submit" disabled={status === "loading"} className="rounded-full bg-[#17324f] px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-[#10283f] disabled:opacity-60 active:scale-[0.97]">{status === "loading" ? "Kaydediliyor…" : "Katıl"}</button>
             </div>
             <label className="mt-5 flex items-start gap-2.5 text-xs leading-5 text-slate-600">
               <input type="checkbox" checked={kvkk} onChange={(event) => setKvkk(event.target.checked)} required className="mt-0.5 accent-[#17324f]" />

@@ -18,7 +18,7 @@ export default function NewsletterForm() {
     setError("");
     try {
       const response = await fetch("/api/subscribe", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ email, kvkk, company }) });
-      const data = (await response.json()) as { ok?: boolean; error?: string };
+      const data = (await response.json().catch(() => ({}))) as { ok?: boolean; error?: string };
       if (data.ok) setStatus("success");
       else { setStatus("error"); setError(data.error ?? "Bir sorun oluştu. Lütfen tekrar deneyin."); }
     } catch {
